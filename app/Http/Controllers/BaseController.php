@@ -7,7 +7,7 @@ use Session;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
 session_start();
-class baseController extends Controller
+class BaseController extends Controller
 {
     public function AuthentificationLogin(){
         $admin_id = Session::get('admin_id');
@@ -82,19 +82,4 @@ class baseController extends Controller
         return Redirect::to('all-bases');
     }
 
-    public function show_base($base_id){
-        $product_category = DB::table('tbl_category')->where('category_status','1')->orderby('category_id','desc')->get();
-        $product_base = DB::table('tbl_base')->where('base_status','1')->orderby('base_id','desc')->get();
-    
-        $base_by_id = DB::table('tbl_product')
-        ->join('tbl_base','tbl_product.base_id','=','tbl_base.base_id')
-        ->where('tbl_product.base_id',$base_id)->get();
-
-        $base_title = DB::table('tbl_base')->where('tbl_base.base_id',$base_id)->limit(1)->get();
-        return view('pages.base.show_base')
-        ->with('category',$product_category)
-        ->with('base',$product_base)
-        ->with('base_by_id',$base_by_id)
-        ->with('base_title',$base_title);
-    }
 }

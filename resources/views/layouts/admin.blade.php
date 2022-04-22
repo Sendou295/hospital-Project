@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 
 <head>
-	<title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Fontawesome :: w3layouts</title>
+	<title>Visitors an Admin Panel position Bootstrap Responsive Website Template | Fontawesome :: w3layouts</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -35,10 +35,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!--header start-->
 		<header class="header fixed-top clearfix">
 			<!--logo start-->
-			<div class="brand">
+			<div class="base">
 
 				<a href="{{ URL::to('/dashboard') }}" class="logo">
-					Dashboard1
+					Dashboard
 				</a>
 				<div class="sidebar-toggle-box">
 					<div class="fa fa-bars"></div>
@@ -104,40 +104,72 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li class="sub-menu">
 							<a href="javascript:;">
 								<i class="fa fa-book"></i>
-								<span>Categorys</span>
+								<span>positions</span>
 							</a>
 							<ul class="sub">
-								<li><a href="{{URL::to('add-category')}}">Create Category</a></li>
-								<li><a href="{{URL::to('all-categories')}}">Show Categories</a></li>
+								<li><a href="{{URL::to('add-position')}}">Create position</a></li>
+								<li><a href="{{URL::to('all-positions')}}">Show positions</a></li>
 							</ul>
 						</li>
 						<li class="sub-menu">
 							<a href="javascript:;">
 								<i class="fa fa-book"></i>
-								<span>Brands</span>
+								<span>bases</span>
 							</a>
 							<ul class="sub">
-								<li><a href="{{URL::to('add-brand')}}">Create Brand</a></li>
-								<li><a href="{{URL::to('all-brands')}}">Show Brands</a></li>
+								<li><a href="{{URL::to('add-base')}}">Create base</a></li>
+								<li><a href="{{URL::to('all-bases')}}">Show bases</a></li>
 							</ul>
 						</li>
 						<li class="sub-menu">
 							<a href="javascript:;">
 								<i class="fa fa-book"></i>
-								<span>Products</span>
+								<span>departments</span>
 							</a>
 							<ul class="sub">
-								<li><a href="{{URL::to('add-product')}}">Create Product</a></li>
-								<li><a href="{{URL::to('all-products')}}">Show Products</a></li>
+								<li><a href="{{URL::to('add-department')}}">Create department</a></li>
+								<li><a href="{{URL::to('all-departments')}}">Show departments</a></li>
 							</ul>
 						</li>
 						<li class="sub-menu">
 							<a href="javascript:;">
 								<i class="fa fa-book"></i>
-								<span>Orders</span>
+								<span>services</span>
 							</a>
 							<ul class="sub">
-								<li><a href="{{URL::to('manage-orders')}}">Manage Order</a></li>
+								<li><a href="{{URL::to('add-service')}}">Create service</a></li>
+								<li><a href="{{URL::to('all-services')}}">Show services</a></li>
+							</ul>
+						</li>
+						<li class="sub-menu">
+							<a href="javascript:;">
+								<i class="fa fa-book"></i>
+								<span>special services</span>
+							</a>
+							<ul class="sub">
+								<li><a href="{{URL::to('add-special_service')}}">Create special service</a></li>
+								<li><a href="{{URL::to('all-special_services')}}">Show special services</a></li>
+							</ul>
+						</li>
+						
+						<li class="sub-menu">
+							<a href="javascript:;">
+								<i class="fa fa-book"></i>
+								<span>equipments</span>
+							</a>
+							<ul class="sub">
+								<li><a href="{{URL::to('add-equipment')}}">Create equipment</a></li>
+								<li><a href="{{URL::to('all-equipments')}}">Show equipments</a></li>
+							</ul>
+						</li>
+						<li class="sub-menu">
+							<a href="javascript:;">
+								<i class="fa fa-book"></i>
+								<span>specialists</span>
+							</a>
+							<ul class="sub">
+								<li><a href="{{URL::to('add-specialist')}}">Create specialist</a></li>
+								<li><a href="{{URL::to('all-specialists')}}">Show specialists</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -156,7 +188,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!-- footer -->
 			<div class="footer">
 				<div class="wthree-copyright">
-					<p>© 2017 Visitors. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a>| Edit by <a href="http://w3layouts.com">Tran Nhat Minh</a></p>
+					<p>© 2022 Visitors. All rights reserved | Edit by <a href="https://www.facebook.com/nhomdepzai">Hieu Nguyen</a>| Design by <a href="http://w3layouts.com">w3layouts.com</a></p>
 				</div>
 			</div>
 			<!-- //footer -->

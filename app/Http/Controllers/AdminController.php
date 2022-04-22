@@ -23,7 +23,7 @@ class AdminController extends Controller
         return view('admin.admin_login');
     }
     public function show_dashboard(){
-        $this->AuthentificationLogin();
+        // $this->AuthentificationLogin();
         return view('admin.dashboard');
     }
     public function dashboard(Request $request){
@@ -31,14 +31,15 @@ class AdminController extends Controller
         $admin_password = md5($request->admin_password);
 
         $result = DB::table('tbl_admin')->where('admin_email',$admin_email)->where('admin_password',$admin_password)->first();
-        if($result){
-            Session::put('admin_name',$result->admin_name);
-            Session::put('admin_id',$result->admin_id);
-            return Redirect::to('/dashboard');
-        }else{
-            Session::put('message','Wrong email or Wrong password');
-            return Redirect::to('/admin');
-        }
+
+        // if($result){
+        //     Session::put('admin_name',$result->admin_name);
+        //     Session::put('admin_id',$result->admin_id);
+        //     return Redirect::to('/dashboard');
+        // }else{
+        //     Session::put('message','Wrong email or Wrong password');
+        //     return Redirect::to('/admin');
+        // }
     }
     public function logout_admin(){
         $this->AuthentificationLogin();

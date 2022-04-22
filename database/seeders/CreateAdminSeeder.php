@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class CreateAdminsSeeder extends Seeder
+class CreateAdminSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -19,9 +19,9 @@ class CreateAdminsSeeder extends Seeder
         $password = Hash::make('123456');
         $admin = [
             [
-                'admin_name' => 'hieu',
                 'admin_email' => 'admin@admin.com',
                 'admin_password' => $password,
+                'admin_name' => 'hieu',
                 'admin_phone' => '0123456789',
             ],
         ];
