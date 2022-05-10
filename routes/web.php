@@ -12,6 +12,23 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//User
+    //Home
+Route::get('/', 'App\Http\Controllers\HomeController@index');
+Route::get('/home', 'App\Http\Controllers\HomeController@index');
+
+    //Base
+    Route::get('/base/{base_id}', 'App\Http\Controllers\BaseController@show_base');
+    //Service
+    Route::get('/service/{service_id}', 'App\Http\Controllers\ServiceController@show_service');
+    //Special Service
+    Route::get('/specialservice/{specialservice_id}', 'App\Http\Controllers\SpecialServiceController@show_specialservice');
+    //Specialist
+    Route::get('/specialist/{specialist_id}', 'App\Http\Controllers\SpecialistController@show_specialist');
+
+
+
 //Admin
 Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin.admin_login');
 Route::get('/dashboard', [\App\Http\Controllers\AdminController::class, 'show_dashboard'])->name('admin.dashboard');

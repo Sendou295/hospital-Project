@@ -135,4 +135,25 @@ class SpecialistController extends Controller
         return Redirect::to('all-specialists');
     }
 
+
+    public function detail_specialists(){
+        $specialist_base = DB::table('tbl_base')->where('base_status','1')->orderby('base_id','desc')->get();
+        $specialist_department = DB::table('tbl_department')->where('department_status','1')->orderby('department_id','desc')->get();
+        $specialist_position = DB::table('tbl_position')->where('position_status','1')->orderby('position_id','desc')->get();
+        
+        $all_specialists = DB::table('tbl_specialist')->where('specialist_status','1')
+            ->join('tbl_base','tbl_base.base_id','=','tbl_specialist.base_id')
+            ->join('tbl_department','tbl_department.department_id','=','tbl_specialist.department_id')
+            ->join('tbl_position','tbl_position.position_id','=','tbl_specialist.position_id')
+            ->orderby('tbl_specialist.specialist_id','desc')->get();
+            $manager_specialist = view('admin.specialist.all_specialists')->with('all_specialists',$all_specialists);
+        // $all_specialists = DB::table('tbl_specialist')->where('specialist_status','1')->orderby('specialist_id','desc')->limit(9)->get();
+    
+        return view('pages.home')
+        ->with('base',$specialist_base)
+        ->with('department',$specialist_department)
+        ->with('position',$specialist_position)
+        ->with('detail_specialists',$detail_specialists);
+        }
+
 }
