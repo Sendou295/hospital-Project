@@ -1,0 +1,59 @@
+.heading{
+    margin-top: 20px;
+    font-size: 1.8rem;
+    font-family: 'Kumbh Sans',sans-serif;
+    display: block;
+    border-bottom: 5px solid #9f9f9f;
+    width: fit-content;
+    line-height: calc(1.8rem / 30);
+}
+.service-list{
+    font-family: "Kumbh Sans",sans-serif;
+    margin: 40px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
+}
+.service-item{
+    display: flex;
+    gap: 0 40px;
+    padding: 0px 20px 30px 0;
+    border-bottom: 2px solid lightgray;
+}
+.service-image{
+    max-width: 400px;
+    max-height: 340px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.service-image img{
+    max-width: inherit;
+    max-height: inherit;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.service-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}
+.service-title{
+    font-size: 1.8rem;
+}
+.service-contact{
+     display: flex;
+     text-align: center;
+     align-items: center;
+    justify-content: space-between;
+}
+.btn-contact{
+    padding: 20px 30px;
+    border: 1px solid lightgray;
+    max-width: 240px;
+    max-height: 80px;
+    border-radius: 99px;
+    flex-grow: 1;
+}
+.btn-contact:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
